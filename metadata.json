@@ -1,0 +1,6 @@
+{
+  "name": "HomeServe - Home Service Management System",
+  "description": "A modern Home Service Management System for booking plumbing, electrical repairs, house cleaning, appliance maintenance, and painting with full customer booking portal, admin dashboard, and MySQL/PHP project architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
