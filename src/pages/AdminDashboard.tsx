@@ -55,7 +55,7 @@ export const AdminDashboard: React.FC = () => {
   // New Service Form State
   const [newServiceName, setNewServiceName] = useState('');
   const [newServiceCategory, setNewServiceCategory] = useState<ServiceCategory>('Plumbing');
-  const [newServicePrice, setNewServicePrice] = useState<number>(45);
+  const [newServicePrice, setNewServicePrice] = useState<number>(349);
   const [newServiceDuration, setNewServiceDuration] = useState<number>(1.5);
   const [newServiceDesc, setNewServiceDesc] = useState('');
   const [newServiceImg, setNewServiceImg] = useState('https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=800&q=80');
@@ -217,7 +217,7 @@ export const AdminDashboard: React.FC = () => {
           <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex items-center justify-between">
             <div>
               <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Gross Revenue</p>
-              <h3 className="text-2xl font-bold text-emerald-600 mt-1 font-mono">${totalRevenue.toFixed(2)}</h3>
+              <h3 className="text-2xl font-bold text-emerald-600 mt-1 font-mono">₹{totalRevenue.toFixed(2)}</h3>
               <p className="text-[11px] text-slate-500 mt-0.5">Fulfilled bookings</p>
             </div>
             <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
@@ -365,7 +365,7 @@ export const AdminDashboard: React.FC = () => {
                         <p className="text-[11px] text-slate-500">{b.timeSlot}</p>
                       </td>
                       <td className="py-3 px-3 font-mono font-bold text-slate-900">
-                        ${b.totalAmount.toFixed(2)}
+                        ₹{b.totalAmount.toFixed(2)}
                       </td>
                       <td className="py-3 px-3">
                         <select
@@ -449,7 +449,7 @@ export const AdminDashboard: React.FC = () => {
                     <th className="py-3 px-3">Service Name</th>
                     <th className="py-3 px-3">Category</th>
                     <th className="py-3 px-3">Est. Duration</th>
-                    <th className="py-3 px-3">Base Price ($)</th>
+                    <th className="py-3 px-3">Base Price (₹)</th>
                     <th className="py-3 px-3">Status</th>
                     <th className="py-3 px-3 text-right">Actions</th>
                   </tr>
@@ -473,7 +473,7 @@ export const AdminDashboard: React.FC = () => {
                         <td className="py-3 px-3">
                           {isEditing ? (
                             <div className="flex items-center gap-1">
-                              <span>$</span>
+                              <span>₹</span>
                               <input
                                 type="number"
                                 min="1"
@@ -486,7 +486,7 @@ export const AdminDashboard: React.FC = () => {
                             </div>
                           ) : (
                             <span className="font-mono font-bold text-slate-900 text-sm">
-                              ${s.basePrice.toFixed(2)}
+                              ₹{s.basePrice.toFixed(2)}
                             </span>
                           )}
                         </td>
@@ -671,7 +671,7 @@ export const AdminDashboard: React.FC = () => {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-slate-700 font-semibold mb-1">Base Price ($) *</label>
+                    <label className="block text-slate-700 font-semibold mb-1">Base Price (₹) *</label>
                     <input
                       type="number"
                       required

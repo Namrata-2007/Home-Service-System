@@ -200,13 +200,13 @@ export const FigmaDesignModal: React.FC = () => {
                       <div className="border border-slate-700 p-3 rounded-lg bg-slate-800 space-y-1.5">
                         <div className="h-20 bg-slate-700 rounded flex items-center justify-center text-slate-400">[Service Image]</div>
                         <p className="font-bold text-white">Pipe Leakage & Tap Fix</p>
-                        <p className="text-[10px] text-emerald-400">Price: $39.00 | ~1.5 hrs</p>
+                        <p className="text-[10px] text-emerald-400">Price: ₹299.00 | ~1.5 hrs</p>
                         <div className="bg-blue-600 text-center py-1 rounded text-white">[Book Now]</div>
                       </div>
                       <div className="border border-slate-700 p-3 rounded-lg bg-slate-800 space-y-1.5">
                         <div className="h-20 bg-slate-700 rounded flex items-center justify-center text-slate-400">[Service Image]</div>
                         <p className="font-bold text-white">Circuit & Short Repair</p>
-                        <p className="text-[10px] text-emerald-400">Price: $45.00 | ~1.5 hrs</p>
+                        <p className="text-[10px] text-emerald-400">Price: ₹349.00 | ~1.5 hrs</p>
                         <div className="bg-blue-600 text-center py-1 rounded text-white">[Book Now]</div>
                       </div>
                     </div>
@@ -232,7 +232,7 @@ export const FigmaDesignModal: React.FC = () => {
                   <div className="space-y-3 max-w-xl mx-auto">
                     <div className="grid grid-cols-4 gap-2 text-center text-[10px]">
                       <div className="bg-slate-800 p-2 rounded border border-slate-700">Total: 48 Bookings</div>
-                      <div className="bg-slate-800 p-2 rounded border border-slate-700">Revenue: $2,840</div>
+                      <div className="bg-slate-800 p-2 rounded border border-slate-700">Revenue: ₹28,400</div>
                       <div className="bg-slate-800 p-2 rounded border border-slate-700">Pending: 3</div>
                       <div className="bg-slate-800 p-2 rounded border border-slate-700">Techs: 5 Active</div>
                     </div>

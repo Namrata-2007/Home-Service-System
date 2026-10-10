@@ -7,10 +7,8 @@ import {
   ShieldCheck, 
   Menu, 
   X, 
-  Database, 
   LogOut, 
   ChevronDown,
-  Layers,
   Sparkles,
   ClipboardList
 } from 'lucide-react';
@@ -25,8 +23,6 @@ export const Navbar: React.FC = () => {
     setIsAuthModalOpen, 
     setAuthMode, 
     bookings,
-    setIsPhpSqlModalOpen,
-    setIsFigmaModalOpen,
     setIsBookingModalOpen,
     setServiceToBook,
     services
@@ -55,7 +51,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-blue-100 shadow-xs">
-      {/* Top Banner: Emergency helpline & Academic Deliverables indicator */}
+      {/* Top Banner: Emergency helpline */}
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white text-xs px-4 py-1.5 flex flex-wrap justify-between items-center gap-2">
         <div className="flex items-center gap-3">
           <span className="flex items-center gap-1.5 font-medium text-blue-200">
@@ -69,25 +65,10 @@ export const Navbar: React.FC = () => {
           </span>
         </div>
 
-        <div className="flex items-center gap-2 text-xs">
-          <button 
-            onClick={() => setIsPhpSqlModalOpen(true)}
-            className="flex items-center gap-1.5 bg-blue-700/60 hover:bg-blue-600 px-2.5 py-0.5 rounded text-blue-100 hover:text-white transition cursor-pointer font-medium border border-blue-500/40"
-            title="Inspect MySQL Tables & PHP Backend Scripts"
-          >
-            <Database className="w-3 h-3 text-cyan-300" />
-            <span>MySQL & PHP Code</span>
-          </button>
-          
-          <button 
-            onClick={() => setIsFigmaModalOpen(true)}
-            className="flex items-center gap-1.5 bg-indigo-700/60 hover:bg-indigo-600 px-2.5 py-0.5 rounded text-indigo-100 hover:text-white transition cursor-pointer font-medium border border-indigo-500/40"
-            title="Figma UI/UX & Wireframe Design Specs"
-          >
-            <Layers className="w-3 h-3 text-amber-300" />
-            <span className="hidden sm:inline">Figma Specs & Wireframe</span>
-            <span className="sm:hidden">Figma</span>
-          </button>
+        <div className="hidden sm:flex items-center gap-2 text-xs text-blue-200">
+          <span>Serving Springfield & Metro Area</span>
+          <span>•</span>
+          <span className="text-emerald-300 font-medium">30-Day Work Warranty</span>
         </div>
       </div>
 
@@ -353,29 +334,6 @@ export const Navbar: React.FC = () => {
               }`}
             >
               Contact Us
-            </button>
-          </div>
-
-          <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
-            <button
-              onClick={() => {
-                setIsPhpSqlModalOpen(true);
-                setMobileMenuOpen(false);
-              }}
-              className="flex items-center gap-2 text-xs font-medium text-slate-700 bg-slate-100 p-2.5 rounded-lg"
-            >
-              <Database className="w-4 h-4 text-blue-600" />
-              MySQL Schema & PHP Backend Code
-            </button>
-            <button
-              onClick={() => {
-                setIsFigmaModalOpen(true);
-                setMobileMenuOpen(false);
-              }}
-              className="flex items-center gap-2 text-xs font-medium text-slate-700 bg-slate-100 p-2.5 rounded-lg"
-            >
-              <Layers className="w-4 h-4 text-indigo-600" />
-              Figma UI/UX & Wireframe Design Specs
             </button>
           </div>
 

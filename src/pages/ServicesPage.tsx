@@ -150,7 +150,7 @@ export const ServicesPage: React.FC = () => {
                   {service.category}
                 </span>
                 <span className="absolute top-3 right-3 bg-blue-600 text-white font-mono font-bold text-xs px-2.5 py-1 rounded-lg shadow-xs">
-                  ${service.basePrice.toFixed(2)}
+                  ₹{service.basePrice.toFixed(2)}
                 </span>
               </div>
 
@@ -211,7 +211,7 @@ export const ServicesPage: React.FC = () => {
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 rounded-xl transition cursor-pointer flex items-center justify-center gap-2 shadow-xs active:scale-98"
                   >
                     <Calendar className="w-4 h-4" />
-                    <span>Book Service (${service.basePrice})</span>
+                    <span>Book Service (₹{service.basePrice})</span>
                   </button>
                 </div>
               </div>
@@ -242,10 +242,10 @@ export const ServicesPage: React.FC = () => {
               <div className="flex items-center gap-4">
                 <div className="text-right">
                   {bundleDiscount > 0 && (
-                    <span className="text-xs text-slate-400 line-through mr-1 font-mono">${bundleTotal.toFixed(2)}</span>
+                    <span className="text-xs text-slate-400 line-through mr-1 font-mono">₹{bundleTotal.toFixed(2)}</span>
                   )}
                   <span className="text-xl font-bold text-blue-700 font-mono">
-                    ${bundleFinal.toFixed(2)}
+                    ₹{bundleFinal.toFixed(2)}
                   </span>
                 </div>
 

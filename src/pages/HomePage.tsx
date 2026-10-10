@@ -171,7 +171,7 @@ export const HomePage: React.FC = () => {
                       </p>
                       <div className="flex items-center gap-2 mt-2">
                         <span className="text-base font-extrabold text-blue-700 font-mono">
-                          ${services[0]?.basePrice}
+                          ₹{services[0]?.basePrice}
                         </span>
                         <span className="text-xs text-slate-400">• ~{services[0]?.durationHours} hrs</span>
                       </div>
@@ -183,7 +183,7 @@ export const HomePage: React.FC = () => {
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 cursor-pointer transition shadow-xs"
                   >
                     <Calendar className="w-3.5 h-3.5" />
-                    Book This Service ($39)
+                    Book This Service (₹{services[0]?.basePrice})
                   </button>
                 </div>
 
@@ -355,7 +355,7 @@ export const HomePage: React.FC = () => {
                     <div>
                       <p className="text-[10px] text-slate-400 font-medium">Standard Rate</p>
                       <p className="text-xl font-extrabold text-blue-700 font-mono">
-                        ${service.basePrice.toFixed(2)}
+                        ₹{service.basePrice.toFixed(2)}
                       </p>
                     </div>
 

@@ -289,7 +289,7 @@ export const MyBookingsPage: React.FC = () => {
                         Payment & Amount
                       </span>
                       <p className="text-slate-800 font-bold text-sm text-blue-700 font-mono">
-                        ${booking.totalAmount.toFixed(2)}
+                        ₹{booking.totalAmount.toFixed(2)}
                       </p>
                       <p className="text-slate-600">
                         Mode: {booking.paymentMethod} ({booking.paymentStatus})

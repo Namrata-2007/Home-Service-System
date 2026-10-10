@@ -77,11 +77,11 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const STORAGE_KEYS = {
-  SERVICES: 'homeserve_services_v1',
-  BOOKINGS: 'homeserve_bookings_v1',
-  USERS: 'homeserve_users_v1',
-  INQUIRIES: 'homeserve_inquiries_v1',
-  AUTH: 'homeserve_auth_v1',
+  SERVICES: 'homeserve_services_v2',
+  BOOKINGS: 'homeserve_bookings_v2',
+  USERS: 'homeserve_users_v2',
+  INQUIRIES: 'homeserve_inquiries_v2',
+  AUTH: 'homeserve_auth_v2',
 };
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -309,7 +309,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setServices(prev => 
       prev.map(s => s.id === serviceId ? { ...s, basePrice: newPrice } : s)
     );
-    addToast(`Service price updated to $${newPrice}.`, 'success');
+    addToast(`Service price updated to ₹${newPrice}.`, 'success');
   };
 
   const updateServiceDetails = (updated: ServiceItem) => {

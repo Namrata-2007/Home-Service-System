@@ -136,17 +136,17 @@ INSERT INTO technicians (full_name, phone, specialty, rating) VALUES
 
 -- Services
 INSERT INTO services (category, service_name, short_description, full_description, base_price, duration_hours, rating) VALUES
-('Plumbing', 'Pipe Leakage & Tap Repair', 'Fix leaks, drippy faucets, and loose joints.', 'Comprehensive diagnostic and sealing for all residential water lines.', 39.00, 1.5, 4.9),
-('Plumbing', 'Drain Unblocking & Pipe Descaling', 'Motorized auger clearing for sinks and floor traps.', 'Heavy-duty obstruction removal with non-toxic chemical pipe flush.', 49.00, 2.0, 4.8),
-('Electrical', 'Electrical Circuit & Short-Fix', 'Trip detection, MCB replacement, and spark diagnosis.', 'Certified inspection of breaker boxes, short lines, and faulty wiring.', 45.00, 1.5, 4.9),
-('House Cleaning', 'Full Deep Home Cleaning', 'Deep sanitation of living room, kitchen, and baths.', 'Top-to-bottom scrub, motorized buffing, and hospital-grade sanitization.', 89.00, 4.0, 5.0),
-('Appliance Repair', 'AC Servicing & Gas Refill', 'Filter wash, coil cleaning, and coolant recharge.', 'Restores cooling efficiency, checks refrigerant pressure, and clears drip tray.', 49.00, 1.5, 4.9),
-('Painting', 'Interior Wall Painting & Touch-up', 'Premium washable emulsions and crack repair.', 'Putty patching, double-coat acrylic painting, and zero-mess drop protection.', 99.00, 6.0, 4.9);
+('Plumbing', 'Pipe Leakage & Tap Repair', 'Fix leaks, drippy faucets, and loose joints.', 'Comprehensive diagnostic and sealing for all residential water lines.', 299.00, 1.5, 4.9),
+('Plumbing', 'Drain Unblocking & Pipe Descaling', 'Motorized auger clearing for sinks and floor traps.', 'Heavy-duty obstruction removal with non-toxic chemical pipe flush.', 499.00, 2.0, 4.8),
+('Electrical', 'Electrical Circuit & Short-Fix', 'Trip detection, MCB replacement, and spark diagnosis.', 'Certified inspection of breaker boxes, short lines, and faulty wiring.', 349.00, 1.5, 4.9),
+('House Cleaning', 'Full Deep Home Cleaning', 'Deep sanitation of living room, kitchen, and baths.', 'Top-to-bottom scrub, motorized buffing, and hospital-grade sanitization.', 1499.00, 4.0, 5.0),
+('Appliance Repair', 'AC Servicing & Gas Refill', 'Filter wash, coil cleaning, and coolant recharge.', 'Restores cooling efficiency, checks refrigerant pressure, and clears drip tray.', 599.00, 1.5, 4.9),
+('Painting', 'Interior Wall Painting & Touch-up', 'Premium washable emulsions and crack repair.', 'Putty patching, double-coat acrylic painting, and zero-mess drop protection.', 1999.00, 6.0, 4.9);
 
 -- Sample Initial Bookings
 INSERT INTO bookings (booking_id, user_id, service_id, technician_id, booking_date, time_slot, service_address, total_amount, payment_method, booking_status) VALUES
-('HSM-4019', 1, 1, 1, '2026-10-12', '09:00 AM - 12:00 PM', '742 Evergreen Terrace, Apt 4B, Springfield', 39.00, 'Cash on Delivery', 'Technician Assigned'),
-('HSM-3820', 1, 4, 3, '2026-09-28', '01:00 PM - 05:00 PM', '742 Evergreen Terrace, Apt 4B, Springfield', 79.00, 'UPI / Card', 'Completed');
+('HSM-4019', 1, 1, 1, '2026-10-12', '09:00 AM - 12:00 PM', '742 Evergreen Terrace, Apt 4B, Springfield', 299.00, 'Cash on Delivery', 'Technician Assigned'),
+('HSM-3820', 1, 4, 3, '2026-09-28', '01:00 PM - 05:00 PM', '742 Evergreen Terrace, Apt 4B, Springfield', 1349.00, 'UPI / Card', 'Completed');
 `;
 
 export const PHP_SCRIPTS = [

@@ -89,16 +89,16 @@ export const BookingModal: React.FC = () => {
 
   const handleApplyCoupon = () => {
     const code = couponCode.trim().toUpperCase();
-    if (code === 'WELCOME10' || code === 'FIRSTHOME') {
-      const disc = 10;
+    if (code === 'WELCOME50' || code === 'FIRSTHOME') {
+      const disc = 50;
       setDiscount(disc);
-      setCouponAppliedMessage(`Promo code applied! $${disc} savings added.`);
-    } else if (code === 'SAVE15') {
-      const disc = 15;
+      setCouponAppliedMessage(`Promo code applied! ₹${disc} savings added.`);
+    } else if (code === 'SAVE100') {
+      const disc = 100;
       setDiscount(disc);
-      setCouponAppliedMessage(`Promo code applied! $${disc} savings added.`);
+      setCouponAppliedMessage(`Promo code applied! ₹${disc} savings added.`);
     } else {
-      setCouponAppliedMessage('Invalid coupon code. Try WELCOME10');
+      setCouponAppliedMessage('Invalid coupon code. Try WELCOME50 or SAVE100');
       setDiscount(0);
     }
   };
@@ -221,7 +221,7 @@ export const BookingModal: React.FC = () => {
                   >
                     {services.map(s => (
                       <option key={s.id} value={s.id}>
-                        [{s.category}] {s.name} — ${s.basePrice}
+                        [{s.category}] {s.name} — ₹{s.basePrice}
                       </option>
                     ))}
                   </select>
@@ -238,8 +238,8 @@ export const BookingModal: React.FC = () => {
                         </p>
                       </div>
                       <div className="text-right">
-                        <span className="text-xs text-slate-500 line-through mr-1 font-mono">${currentSelectedService.basePrice + 20}</span>
-                        <span className="text-xl font-bold text-blue-700 font-mono">${currentSelectedService.basePrice}</span>
+                        <span className="text-xs text-slate-500 line-through mr-1 font-mono">₹{currentSelectedService.basePrice + 200}</span>
+                        <span className="text-xl font-bold text-blue-700 font-mono">₹{currentSelectedService.basePrice}</span>
                       </div>
                     </div>
                   )}
@@ -485,21 +485,21 @@ export const BookingModal: React.FC = () => {
                 <div className="pt-3 border-t border-slate-200 space-y-1.5 text-xs text-slate-600">
                   <div className="flex justify-between">
                     <span>Base Service Charge:</span>
-                    <span className="font-mono">${basePrice.toFixed(2)}</span>
+                    <span className="font-mono">₹{basePrice.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-emerald-600">
                     <span>Inspection & Visiting Fee:</span>
-                    <span>$0.00 (Free)</span>
+                    <span>₹0.00 (Free)</span>
                   </div>
                   {discount > 0 && (
                     <div className="flex justify-between text-emerald-600 font-semibold">
                       <span>Promo Discount:</span>
-                      <span>-${discount.toFixed(2)}</span>
+                      <span>-₹{discount.toFixed(2)}</span>
                     </div>
                   )}
                   <div className="flex justify-between text-sm font-bold text-slate-900 pt-1.5 border-t border-slate-200">
                     <span>Total Estimated Amount:</span>
-                    <span className="text-blue-700 font-mono text-base">${finalTotal.toFixed(2)}</span>
+                    <span className="text-blue-700 font-mono text-base">₹{finalTotal.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
@@ -560,7 +560,7 @@ export const BookingModal: React.FC = () => {
                   </div>
                   <div className="flex justify-between pt-2 border-t border-slate-200 font-bold text-slate-900">
                     <span>Total Amount:</span>
-                    <span className="text-blue-700 font-mono text-sm">${createdBookingResult.totalAmount.toFixed(2)}</span>
+                    <span className="text-blue-700 font-mono text-sm">₹{createdBookingResult.totalAmount.toFixed(2)}</span>
                   </div>
                 </div>
               )}

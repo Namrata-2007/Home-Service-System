@@ -128,20 +128,20 @@ export const InvoiceModal: React.FC = () => {
                 </td>
                 <td className="py-3 px-3 text-center text-slate-600">{invoiceBooking.serviceCategory}</td>
                 <td className="py-3 px-3 text-right">1</td>
-                <td className="py-3 px-3 text-right font-mono">${invoiceBooking.servicePrice.toFixed(2)}</td>
+                <td className="py-3 px-3 text-right font-mono">₹{invoiceBooking.servicePrice.toFixed(2)}</td>
               </tr>
               <tr>
                 <td className="py-2 px-3 text-slate-600">Doorstep Inspection & Visit Fee</td>
                 <td className="py-2 px-3 text-center text-slate-500">—</td>
                 <td className="py-2 px-3 text-right">1</td>
-                <td className="py-2 px-3 text-right font-mono text-emerald-600">$0.00</td>
+                <td className="py-2 px-3 text-right font-mono text-emerald-600">₹0.00</td>
               </tr>
               {invoiceBooking.discountApplied && invoiceBooking.discountApplied > 0 ? (
                 <tr>
                   <td className="py-2 px-3 text-emerald-700 font-medium">Promotional Discount Applied</td>
                   <td className="py-2 px-3 text-center text-emerald-700">—</td>
                   <td className="py-2 px-3 text-right">1</td>
-                  <td className="py-2 px-3 text-right font-mono text-emerald-700">-${invoiceBooking.discountApplied.toFixed(2)}</td>
+                  <td className="py-2 px-3 text-right font-mono text-emerald-700">-₹{invoiceBooking.discountApplied.toFixed(2)}</td>
                 </tr>
               ) : null}
             </tbody>
@@ -152,15 +152,15 @@ export const InvoiceModal: React.FC = () => {
             <div className="w-56 space-y-1.5 text-xs">
               <div className="flex justify-between text-slate-600">
                 <span>Subtotal:</span>
-                <span className="font-mono">${invoiceBooking.servicePrice.toFixed(2)}</span>
+                <span className="font-mono">₹{invoiceBooking.servicePrice.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-slate-600">
                 <span>Taxes & GST (0%):</span>
-                <span className="font-mono">$0.00</span>
+                <span className="font-mono">₹0.00</span>
               </div>
               <div className="flex justify-between font-bold text-sm text-slate-900 pt-2 border-t border-slate-200">
                 <span>Total Due:</span>
-                <span className="text-blue-700 font-mono text-base">${invoiceBooking.totalAmount.toFixed(2)}</span>
+                <span className="text-blue-700 font-mono text-base">₹{invoiceBooking.totalAmount.toFixed(2)}</span>
               </div>
             </div>
           </div>
