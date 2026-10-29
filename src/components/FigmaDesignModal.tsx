@@ -240,7 +240,7 @@ export const FigmaDesignModal: React.FC = () => {
                       <p className="font-bold text-white mb-2">Bookings Management Table</p>
                       <div className="text-[10px] text-slate-400 border-t border-slate-700 pt-1 flex justify-between">
                         <span>#HSM-4019</span>
-                        <span>John Doe</span>
+                        <span>Aarav Sharma</span>
                         <span>Plumbing</span>
                         <span className="text-amber-400">[Status: Assigned]</span>
                         <span className="text-blue-400">[Actions: Reassign / Status]</span>

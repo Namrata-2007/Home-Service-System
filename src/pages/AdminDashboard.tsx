@@ -74,9 +74,9 @@ export const AdminDashboard: React.FC = () => {
   const handleAdminGateLogin = () => {
     const adminAccount = users.find(u => u.role === 'admin') || {
       id: 99,
-      name: 'System Admin',
-      email: 'admin@homeserve.com',
-      phone: '+1 (555) 100-2000',
+      name: 'Siddharth Deshpande',
+      email: 'admin@homeserve.in',
+      phone: '+91 98230 45678',
       role: 'admin',
       createdAt: '2026-01-01'
     };
@@ -132,9 +132,14 @@ export const AdminDashboard: React.FC = () => {
   // Filtered Bookings
   const filteredBookings = bookings.filter(b => {
     const matchesFilter = bookingFilterStatus === 'All' || b.status === bookingFilterStatus;
-    const matchesSearch = b.id.toLowerCase().includes(bookingSearch.toLowerCase()) ||
-                          b.userName.toLowerCase().includes(bookingSearch.toLowerCase()) ||
-                          b.serviceName.toLowerCase().includes(bookingSearch.toLowerCase());
+    const q = bookingSearch.toLowerCase();
+    const matchesSearch = b.id.toLowerCase().includes(q) ||
+                          b.userName.toLowerCase().includes(q) ||
+                          b.userPhone.toLowerCase().includes(q) ||
+                          b.serviceName.toLowerCase().includes(q) ||
+                          b.address.city.toLowerCase().includes(q) ||
+                          b.address.street.toLowerCase().includes(q) ||
+                          (b.technician && b.technician.name.toLowerCase().includes(q));
     return matchesFilter && matchesSearch;
   });
 
@@ -154,7 +159,7 @@ export const AdminDashboard: React.FC = () => {
 
           <div className="bg-indigo-50/70 border border-indigo-200/60 p-4 rounded-xl text-left text-xs space-y-1">
             <p className="font-bold text-indigo-900">Academic Demo Credentials:</p>
-            <p className="text-indigo-800">Email: <code>admin@homeserve.com</code></p>
+            <p className="text-indigo-800">Email: <code>admin@homeserve.in</code></p>
             <p className="text-indigo-800">Password: <code>admin123</code></p>
           </div>
 
@@ -304,7 +309,7 @@ export const AdminDashboard: React.FC = () => {
                 <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
                 <input
                   type="text"
-                  placeholder="Search by ID, customer, service..."
+                  placeholder="Search ID, customer, +91 phone, city, technician..."
                   value={bookingSearch}
                   onChange={e => setBookingSearch(e.target.value)}
                   className="w-full pl-9 pr-3 py-2 text-xs border border-slate-200 rounded-xl focus:outline-hidden focus:border-blue-500"
@@ -336,6 +341,7 @@ export const AdminDashboard: React.FC = () => {
                   <tr>
                     <th className="py-3 px-3">Booking ID</th>
                     <th className="py-3 px-3">Customer</th>
+                    <th className="py-3 px-3">Service Address</th>
                     <th className="py-3 px-3">Service & Category</th>
                     <th className="py-3 px-3">Date & Slot</th>
                     <th className="py-3 px-3">Amount</th>
@@ -352,7 +358,15 @@ export const AdminDashboard: React.FC = () => {
                       </td>
                       <td className="py-3 px-3">
                         <p className="font-semibold text-slate-900">{b.userName}</p>
-                        <p className="text-[11px] text-slate-400">{b.userPhone}</p>
+                        <p className="text-[11px] text-slate-500 font-mono">{b.userPhone}</p>
+                      </td>
+                      <td className="py-3 px-3 max-w-[200px]">
+                        <p className="text-slate-700 font-medium leading-snug">
+                          {b.address.apartment ? `${b.address.apartment}, ` : ''}{b.address.street}
+                        </p>
+                        <p className="text-[11px] text-slate-500">
+                          {b.address.city}, Maharashtra - {b.address.zipCode}
+                        </p>
                       </td>
                       <td className="py-3 px-3">
                         <p className="font-medium text-slate-800">{b.serviceName}</p>
@@ -380,13 +394,18 @@ export const AdminDashboard: React.FC = () => {
                           }}
                           className="text-xs border border-slate-200 rounded-lg p-1.5 bg-white focus:outline-hidden"
                         >
-                          <option value="">-- Assign Staff --</option>
+                          <option value="">-- Assign Technician --</option>
                           {technicians.map(t => (
                             <option key={t.id} value={t.id}>
                               {t.name} ({t.specialty})
                             </option>
                           ))}
                         </select>
+                        {b.technician && (
+                          <p className="text-[10px] text-slate-500 font-mono mt-1">
+                            📞 {b.technician.phone}
+                          </p>
+                        )}
                       </td>
                       <td className="py-3 px-3">
                         <select

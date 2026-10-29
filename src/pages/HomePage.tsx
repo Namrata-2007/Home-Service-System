@@ -295,7 +295,7 @@ export const HomePage: React.FC = () => {
                 Available Home Services
               </h2>
               <p className="text-sm text-slate-500 mt-1">
-                Showing {filteredServices.length} vetted home solutions in Springfield
+                Showing {filteredServices.length} vetted home solutions across Pune & Mumbai
               </p>
             </div>
 
@@ -382,7 +382,7 @@ export const HomePage: React.FC = () => {
               The HomeServe Standard
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
-              Why Springfield Homeowners Trust Us Daily
+              Why Indian Homeowners Trust Us Daily
             </h2>
             <p className="text-sm text-slate-600 mt-3 leading-relaxed">
               We eliminate the frustration of untrustworthy handymen, hidden surcharges, and delayed appointments. Our platform delivers vetted excellence.
@@ -436,18 +436,18 @@ export const HomePage: React.FC = () => {
             </div>
 
             <p className="text-base sm:text-lg italic font-medium leading-relaxed text-blue-50">
-              "When our kitchen sink pipe burst on a Sunday afternoon, HomeServe sent technician David Miller within two hours. He replaced the cracked pipe, cleared the drain, and left the area spotless. Truly lifesavers!"
+              "When our kitchen sink pipe burst on a Sunday afternoon, HomeServe sent technician Rajesh Patil within two hours. He replaced the cracked pipe, cleared the drain, and left the area spotless. Truly lifesavers!"
             </p>
 
             <div className="flex items-center gap-3 pt-2">
               <img
                 src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80"
-                alt="Claire Sterling"
+                alt="Ananya Kulkarni"
                 className="w-12 h-12 rounded-full object-cover border-2 border-white/40"
               />
               <div>
-                <p className="font-bold text-sm text-white">Claire Sterling</p>
-                <p className="text-xs text-blue-200">Springfield Homeowner • Plumb & Drain Service</p>
+                <p className="font-bold text-sm text-white">Ananya Kulkarni</p>
+                <p className="text-xs text-blue-200">Kothrud, Pune Homeowner • Plumb & Drain Service</p>
               </div>
             </div>
           </div>

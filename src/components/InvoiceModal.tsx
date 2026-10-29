@@ -52,8 +52,8 @@ export const InvoiceModal: React.FC = () => {
                   Home<span className="text-blue-600">Serve</span>
                 </span>
               </div>
-              <p className="text-xs text-slate-500">742 Evergreen Plaza, Suite 400</p>
-              <p className="text-xs text-slate-500">Springfield, IL 62704 • support@homeserve.com</p>
+              <p className="text-xs text-slate-500">402, Sai Heritage Complex, FC Road, Shivajinagar</p>
+              <p className="text-xs text-slate-500">Pune, Maharashtra 411005 • +91 98230 45678 • support@homeserve.in</p>
             </div>
 
             <div className="text-right">
@@ -170,7 +170,7 @@ export const InvoiceModal: React.FC = () => {
             <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0" />
             <div>
               <p className="font-semibold">HomeServe Satisfaction Guarantee</p>
-              <p className="text-[11px] text-blue-700">All services are backed by a complimentary 30-day rework warranty. Contact support@homeserve.com for disputes.</p>
+              <p className="text-[11px] text-blue-700">All services are backed by a complimentary 30-day rework warranty. Contact support@homeserve.in or call 1800-209-4663 for support.</p>
             </div>
           </div>
         </div>

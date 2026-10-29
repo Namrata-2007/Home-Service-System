@@ -145,20 +145,20 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm text-slate-400">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-                <span>742 Evergreen Plaza, Suite 400, Springfield, IL 62704</span>
+                <span>402, Sai Heritage Complex, FC Road, Shivajinagar, Pune, Maharashtra 411005</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>+1 (800) 555-HOME (24/7)</span>
+                <span>+91 98230 45678 / 1800-209-4663 (24/7)</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>support@homeserve.com</span>
+                <span>support@homeserve.in</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-slate-200">Mon - Sun: 7:00 AM - 10:00 PM</p>
+                  <p className="text-slate-200">Mon - Sun: 7:00 AM - 10:00 PM IST</p>
                   <p className="text-[11px] text-slate-500">Emergency crew on standby 24/7</p>
                 </div>
               </li>

@@ -77,11 +77,11 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const STORAGE_KEYS = {
-  SERVICES: 'homeserve_services_v2',
-  BOOKINGS: 'homeserve_bookings_v2',
-  USERS: 'homeserve_users_v2',
-  INQUIRIES: 'homeserve_inquiries_v2',
-  AUTH: 'homeserve_auth_v2',
+  SERVICES: 'homeserve_services_v4',
+  BOOKINGS: 'homeserve_bookings_v4',
+  USERS: 'homeserve_users_v4',
+  INQUIRIES: 'homeserve_inquiries_v4',
+  AUTH: 'homeserve_auth_v4',
 };
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -102,7 +102,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     try {
       const stored = localStorage.getItem(STORAGE_KEYS.AUTH);
       if (stored) return JSON.parse(stored);
-      // Default to demo customer John Doe for immediate frictionless browsing
+      // Default to demo customer Aarav Sharma for immediate frictionless browsing
       return INITIAL_USERS[0];
     } catch {
       return INITIAL_USERS[0];
@@ -139,12 +139,12 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       return stored ? JSON.parse(stored) : [
         {
           id: 1,
-          name: 'Robert Miller',
-          email: 'robert.m@example.com',
-          phone: '+1 (555) 443-2211',
+          name: 'Karan Malhotra',
+          email: 'karan.m@example.com',
+          phone: '+91 98112 23344',
           category: 'Commercial Inquiry',
-          message: 'Do you offer monthly maintenance contracts for small office buildings with 4 floors?',
-          createdAt: '2026-10-08',
+          message: 'Do you offer monthly AMC maintenance contracts for a 4-floor IT office building in Baner, Pune?',
+          createdAt: '2026-10-25',
           resolved: false
         }
       ];
@@ -206,9 +206,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       addToast(`Welcome back, ${existing.name}! Logged in as ${existing.role}.`, 'success');
       return true;
     }
-    // If logging in with admin@homeserve.com or role specified
+    // If logging in with admin@homeserve.in or role specified
     if (email.toLowerCase().includes('admin') || role === 'admin') {
-      const adminUser = users.find(u => u.role === 'admin') || INITIAL_USERS[2];
+      const adminUser = users.find(u => u.role === 'admin') || INITIAL_USERS[INITIAL_USERS.length - 1];
       setCurrentUser(adminUser);
       addToast(`Administrator access granted (${adminUser.name}).`, 'success');
       return true;
@@ -219,7 +219,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       id: Date.now(),
       name: email.split('@')[0],
       email: email,
-      phone: '+1 (555) 000-0000',
+      phone: '+91 98765 00000',
       role: role || 'customer',
       createdAt: new Date().toISOString().split('T')[0]
     };
@@ -242,7 +242,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       email,
       phone,
       address,
-      city: 'Springfield',
+      city: 'Pune',
       role: 'customer',
       createdAt: new Date().toISOString().split('T')[0]
     };

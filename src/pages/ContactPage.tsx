@@ -33,7 +33,7 @@ export const ContactPage: React.FC = () => {
     submitInquiry({
       name: name.trim(),
       email: email.trim(),
-      phone: phone.trim() || '+1 (555) 000-0000',
+      phone: phone.trim() || '+91 98765 00000',
       category: category,
       message: message.trim()
     });
@@ -45,7 +45,7 @@ export const ContactPage: React.FC = () => {
   const faqs = [
     {
       q: 'How quickly can a technician reach my home?',
-      a: 'We offer standard 3-hour arrival windows throughout Springfield. For emergency water leaks or electrical trips, emergency dispatch typically reaches you within 60 to 90 minutes.'
+      a: 'We offer standard 3-hour arrival windows across Pune, Mumbai, and nearby metro zones. For emergency water leaks or electrical trips, emergency dispatch typically reaches you within 60 to 90 minutes.'
     },
     {
       q: 'What is the 30-day workmanship warranty?',
@@ -91,8 +91,8 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-bold text-slate-900">24/7 Helpline & Dispatch</p>
-                    <p className="text-blue-700 font-semibold text-sm mt-0.5">+1 (800) 555-HOME</p>
-                    <p className="text-slate-500 text-[11px]">Toll-free across Springfield region</p>
+                    <p className="text-blue-700 font-semibold text-sm mt-0.5">+91 98230 45678 / 1800-209-4663</p>
+                    <p className="text-slate-500 text-[11px]">Toll-free across Pune, Mumbai & Maharashtra</p>
                   </div>
                 </div>
 
@@ -102,7 +102,7 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-bold text-slate-900">Email Support</p>
-                    <p className="text-slate-800 font-medium mt-0.5">support@homeserve.com</p>
+                    <p className="text-slate-800 font-medium mt-0.5">support@homeserve.in</p>
                     <p className="text-slate-500 text-[11px]">Average reply within 2 business hours</p>
                   </div>
                 </div>
@@ -113,8 +113,8 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-bold text-slate-900">Central Service Operations Center</p>
-                    <p className="text-slate-800 font-medium mt-0.5">742 Evergreen Plaza, Suite 400</p>
-                    <p className="text-slate-500 text-[11px]">Springfield, IL 62704</p>
+                    <p className="text-slate-800 font-medium mt-0.5">402, Sai Heritage Complex, FC Road, Shivajinagar</p>
+                    <p className="text-slate-500 text-[11px]">Pune, Maharashtra 411005, India</p>
                   </div>
                 </div>
 
@@ -123,8 +123,8 @@ export const ContactPage: React.FC = () => {
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="font-bold text-slate-900">Operating Schedule</p>
-                    <p className="text-slate-800 font-medium mt-0.5">Monday – Sunday: 7:00 AM – 10:00 PM</p>
+                    <p className="font-bold text-slate-900">Operating Schedule (IST)</p>
+                    <p className="text-slate-800 font-medium mt-0.5">Monday – Sunday: 7:00 AM – 10:00 PM IST</p>
                     <p className="text-emerald-600 font-semibold text-[11px]">Emergency technicians on standby 24/7</p>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export const ContactPage: React.FC = () => {
                     <input
                       type="text"
                       required
-                      placeholder="e.g. David Miller"
+                      placeholder="e.g. Rajesh Sharma"
                       value={name}
                       onChange={e => setName(e.target.value)}
                       className="w-full p-2.5 border border-slate-200 rounded-xl focus:outline-hidden focus:border-blue-500"
@@ -185,7 +185,7 @@ export const ContactPage: React.FC = () => {
                     <label className="block font-semibold text-slate-700 mb-1">Phone Number</label>
                     <input
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+91 98765 43210"
                       value={phone}
                       onChange={e => setPhone(e.target.value)}
                       className="w-full p-2.5 border border-slate-200 rounded-xl focus:outline-hidden focus:border-blue-500"
@@ -199,7 +199,7 @@ export const ContactPage: React.FC = () => {
                     <input
                       type="email"
                       required
-                      placeholder="david@example.com"
+                      placeholder="rajesh.sharma@example.com"
                       value={email}
                       onChange={e => setEmail(e.target.value)}
                       className="w-full p-2.5 border border-slate-200 rounded-xl focus:outline-hidden focus:border-blue-500"

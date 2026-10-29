@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS users (
     phone_number VARCHAR(20) NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
     street_address TEXT NULL,
-    city VARCHAR(80) DEFAULT 'Springfield',
+    city VARCHAR(80) DEFAULT 'Pune',
     zip_code VARCHAR(15) NULL,
     status ENUM('Active', 'Suspended') DEFAULT 'Active',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -119,20 +119,22 @@ CREATE TABLE IF NOT EXISTS inquiries (
 
 -- Default Administrator (password: admin123)
 INSERT INTO administrators (full_name, email, password_hash, role) VALUES 
-('System Admin', 'admin@homeserve.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'SuperAdmin');
+('Siddharth Deshpande', 'admin@homeserve.in', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'SuperAdmin');
 
 -- Sample Customers (password: password123)
 INSERT INTO users (full_name, email, phone_number, password_hash, street_address, city, zip_code) VALUES
-('John Doe', 'john.doe@example.com', '+1 (555) 789-0123', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '742 Evergreen Terrace, Apt 4B', 'Springfield', '62704'),
-('Sarah Connor', 'sarah.c@example.com', '+1 (555) 890-1234', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '104 Ocean View Drive', 'Springfield', '62702');
+('Aarav Sharma', 'aarav.sharma@example.com', '+91 98765 43210', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Flat 402, Green Valley Residency, Kothrud', 'Pune', '411038'),
+('Sneha Joshi', 'sneha.joshi@example.com', '+91 97654 32109', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Flat B-104, Blue Ridge Township, Hinjewadi Phase 1', 'Pune', '411057'),
+('Rohan Mehta', 'rohan.mehta@example.com', '+91 99887 76655', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Plot 18, Harmony Park, ITI Road, Aundh', 'Pune', '411007');
 
 -- Technicians
 INSERT INTO technicians (full_name, phone, specialty, rating) VALUES
-('David Miller', '+1 (555) 234-5678', 'Plumbing', 4.9),
-('Marcus Vance', '+1 (555) 345-6789', 'Electrical', 4.9),
-('Elena Rostova', '+1 (555) 456-7890', 'House Cleaning', 5.0),
-('Carlos Mendez', '+1 (555) 567-8901', 'Appliance Repair', 4.8),
-('Samuel Hayes', '+1 (555) 678-9012', 'Painting', 4.9);
+('Rajesh Patil', '+91 98231 11223', 'Plumbing', 4.9),
+('Vikram Deshmukh', '+91 98232 22334', 'Electrical', 4.9),
+('Priya Nair', '+91 98233 33445', 'House Cleaning', 5.0),
+('Suresh Kulkarni', '+91 98234 44556', 'Appliance Repair', 4.8),
+('Amit Verma', '+91 98235 55667', 'Painting', 4.9),
+('Manoj Shinde', '+91 98236 66778', 'Carpentry', 4.8);
 
 -- Services
 INSERT INTO services (category, service_name, short_description, full_description, base_price, duration_hours, rating) VALUES
@@ -145,8 +147,8 @@ INSERT INTO services (category, service_name, short_description, full_descriptio
 
 -- Sample Initial Bookings
 INSERT INTO bookings (booking_id, user_id, service_id, technician_id, booking_date, time_slot, service_address, total_amount, payment_method, booking_status) VALUES
-('HSM-4019', 1, 1, 1, '2026-10-12', '09:00 AM - 12:00 PM', '742 Evergreen Terrace, Apt 4B, Springfield', 299.00, 'Cash on Delivery', 'Technician Assigned'),
-('HSM-3820', 1, 4, 3, '2026-09-28', '01:00 PM - 05:00 PM', '742 Evergreen Terrace, Apt 4B, Springfield', 1349.00, 'UPI / Card', 'Completed');
+('HSM-4019', 1, 1, 1, '2026-10-30', '09:00 AM - 12:00 PM', 'Flat 402, Green Valley Residency, Kothrud, Pune - 411038', 299.00, 'Cash on Delivery', 'Technician Assigned'),
+('HSM-3820', 1, 4, 3, '2026-10-18', '01:00 PM - 05:00 PM', 'Flat 402, Green Valley Residency, Kothrud, Pune - 411038', 1349.00, 'UPI / Card', 'Completed');
 `;
 
 export const PHP_SCRIPTS = [

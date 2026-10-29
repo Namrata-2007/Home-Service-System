@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center gap-3">
           <span className="flex items-center gap-1.5 font-medium text-blue-200">
             <Phone className="w-3.5 h-3.5 text-blue-300" />
-            24/7 Home Emergency: <strong className="text-white">+1 (800) 555-HOME</strong>
+            24/7 Home Emergency: <strong className="text-white">1800-209-4663 / +91 98230 45678</strong>
           </span>
           <span className="hidden md:inline-block text-blue-400">|</span>
           <span className="hidden md:flex items-center gap-1 text-blue-200">
@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
         </div>
 
         <div className="hidden sm:flex items-center gap-2 text-xs text-blue-200">
-          <span>Serving Springfield & Metro Area</span>
+          <span>Serving Pune, Mumbai & Metro Areas</span>
           <span>•</span>
           <span className="text-emerald-300 font-medium">30-Day Work Warranty</span>
         </div>

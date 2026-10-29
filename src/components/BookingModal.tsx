@@ -38,8 +38,8 @@ export const BookingModal: React.FC = () => {
   const [userPhone, setUserPhone] = useState('');
   const [streetAddress, setStreetAddress] = useState('');
   const [apartment, setApartment] = useState('');
-  const [city, setCity] = useState('Springfield');
-  const [zipCode, setZipCode] = useState('62704');
+  const [city, setCity] = useState('Pune');
+  const [zipCode, setZipCode] = useState('411038');
   const [notes, setNotes] = useState('');
   const [paymentMethod, setPaymentMethod] = useState<'Cash on Delivery' | 'Online (Simulated)' | 'UPI / Card'>('Cash on Delivery');
   
@@ -320,7 +320,7 @@ export const BookingModal: React.FC = () => {
                     <input
                       type="text"
                       required
-                      placeholder="e.g. John Doe"
+                      placeholder="e.g. Aarav Sharma"
                       value={userName}
                       onChange={e => setUserName(e.target.value)}
                       className="w-full p-2.5 text-sm border border-slate-200 rounded-xl focus:outline-hidden focus:border-blue-500"
@@ -331,7 +331,7 @@ export const BookingModal: React.FC = () => {
                     <input
                       type="tel"
                       required
-                      placeholder="+1 (555) 789-0123"
+                      placeholder="+91 98765 43210"
                       value={userPhone}
                       onChange={e => setUserPhone(e.target.value)}
                       className="w-full p-2.5 text-sm border border-slate-200 rounded-xl focus:outline-hidden focus:border-blue-500"
@@ -342,7 +342,7 @@ export const BookingModal: React.FC = () => {
                     <input
                       type="email"
                       required
-                      placeholder="john@example.com"
+                      placeholder="aarav.sharma@example.com"
                       value={userEmail}
                       onChange={e => setUserEmail(e.target.value)}
                       className="w-full p-2.5 text-sm border border-slate-200 rounded-xl focus:outline-hidden focus:border-blue-500"
@@ -352,21 +352,21 @@ export const BookingModal: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
                   <div className="sm:col-span-2">
-                    <label className="block text-xs text-slate-500 mb-1">Street Address *</label>
+                    <label className="block text-xs text-slate-500 mb-1">Street / Area / Society *</label>
                     <input
                       type="text"
                       required
-                      placeholder="House / Building No., Street Name"
+                      placeholder="e.g. Green Valley Residency, Paud Road, Kothrud"
                       value={streetAddress}
                       onChange={e => setStreetAddress(e.target.value)}
                       className="w-full p-2.5 text-sm border border-slate-200 rounded-xl focus:outline-hidden focus:border-blue-500"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs text-slate-500 mb-1">Apt / Flat / Suite</label>
+                    <label className="block text-xs text-slate-500 mb-1">Flat / Wing / House No.</label>
                     <input
                       type="text"
-                      placeholder="e.g. Apt 4B"
+                      placeholder="e.g. Flat 402, Wing A"
                       value={apartment}
                       onChange={e => setApartment(e.target.value)}
                       className="w-full p-2.5 text-sm border border-slate-200 rounded-xl focus:outline-hidden focus:border-blue-500"
@@ -385,7 +385,7 @@ export const BookingModal: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs text-slate-500 mb-1">ZIP Code</label>
+                    <label className="block text-xs text-slate-500 mb-1">PIN Code</label>
                     <input
                       type="text"
                       value={zipCode}

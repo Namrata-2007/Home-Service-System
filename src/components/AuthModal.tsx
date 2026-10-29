@@ -61,10 +61,10 @@ export const AuthModal: React.FC = () => {
 
   const handleQuickLogin = (type: 'customer' | 'admin') => {
     if (type === 'customer') {
-      const demoCust = users.find(u => u.email === 'john.doe@example.com') || users[0];
+      const demoCust = users.find(u => u.email === 'aarav.sharma@example.com') || users[0];
       if (demoCust) setCurrentUser(demoCust);
     } else {
-      const demoAdmin = users.find(u => u.role === 'admin') || users[2];
+      const demoAdmin = users.find(u => u.role === 'admin') || users[users.length - 1];
       if (demoAdmin) setCurrentUser(demoAdmin);
     }
     setIsAuthModalOpen(false);
@@ -109,14 +109,14 @@ export const AuthModal: React.FC = () => {
               onClick={() => handleQuickLogin('customer')}
               className="text-xs font-medium py-1.5 px-2 bg-white hover:bg-blue-100/60 text-blue-800 border border-blue-200 rounded-lg text-center transition cursor-pointer"
             >
-              👤 Demo Customer (John)
+              👤 Demo Customer (Aarav)
             </button>
             <button
               type="button"
               onClick={() => handleQuickLogin('admin')}
               className="text-xs font-medium py-1.5 px-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-800 border border-indigo-200 rounded-lg text-center transition cursor-pointer"
             >
-              🛡️ Demo Admin (Supervisor)
+              🛡️ Demo Admin (Siddharth)
             </button>
           </div>
         </div>
@@ -171,7 +171,7 @@ export const AuthModal: React.FC = () => {
                 <input
                   type="text"
                   required
-                  placeholder="e.g. John Doe"
+                  placeholder="e.g. Aarav Sharma"
                   value={fullName}
                   onChange={e => setFullName(e.target.value)}
                   className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-hidden focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition"
@@ -189,7 +189,7 @@ export const AuthModal: React.FC = () => {
               <input
                 type="email"
                 required
-                placeholder="you@example.com"
+                placeholder="aarav.sharma@example.com"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-hidden focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition"
@@ -208,7 +208,7 @@ export const AuthModal: React.FC = () => {
                   <input
                     type="tel"
                     required
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+91 98765 43210"
                     value={phoneNumber}
                     onChange={e => setPhoneNumber(e.target.value)}
                     className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-hidden focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition"
@@ -218,13 +218,13 @@ export const AuthModal: React.FC = () => {
 
               <div>
                 <label className="block text-xs font-semibold text-slate-700 mb-1">
-                  Street Address
+                  Residential Address
                 </label>
                 <div className="relative">
                   <MapPin className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
                   <input
                     type="text"
-                    placeholder="House / Apartment, Street"
+                    placeholder="Flat / Society Name, Area, Pune"
                     value={address}
                     onChange={e => setAddress(e.target.value)}
                     className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-hidden focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition"

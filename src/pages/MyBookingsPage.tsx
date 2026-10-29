@@ -308,7 +308,7 @@ export const MyBookingsPage: React.FC = () => {
                         />
                         <div>
                           <p className="font-bold text-slate-900">{booking.technician.name}</p>
-                          <p className="text-slate-500">Certified {booking.technician.specialty} Specialist</p>
+                          <p className="text-slate-500">Certified {booking.technician.specialty} Specialist • <span className="font-mono">{booking.technician.phone}</span></p>
                           <div className="flex items-center gap-1 text-amber-500 mt-0.5">
                             <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
                             <span className="font-bold">{booking.technician.rating} Rating</span>
